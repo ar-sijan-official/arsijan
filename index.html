@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arafat Rahman Sijan - Cybersecurity Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+    body { 
+      font-family: 'Roboto Mono', monospace; 
+      scroll-behavior: smooth; 
+      position: relative; 
+      overflow-x: hidden; 
+      background: rgba(0, 0, 0, 0.9); 
+    }
+    canvas { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      z-index: -1; 
+      width: 100%; 
+      height: 100%; 
+      opacity: 0.5; 
+      filter: blur(2px); 
+    }
+    .animate-slide-up { animation: slideUp 0.5s ease-out; }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .hover-scale { transition: transform 0.3s; }
+    .hover-scale:hover { transform: scale(1.05); }
+    .nav-link { transition: color 0.3s; }
+    .nav-link:hover { color: #34d399; }
+    section { position: relative; z-index: 1; }
+  </style>
+</head>
+<body class="text-gray-100">
+  <!-- Matrix Background Canvas -->
+  <canvas id="matrix"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg z-50">
+    <div class="max-w-5xl mx-auto px-4 md:px-20 py-4 flex justify-between items-center">
+      <div class="space-x-6">
+        <a href="#about" class="nav-link text-gray-100 hover:text-green-400">About Me</a>
+        <a href="#skills" class="nav-link text-gray-100 hover:text-green-400">Skills</a>
+        <a href="#experience" class="nav-link text-gray-100 hover:text-green-400">Experience</a>
+        <a href="#certifications" class="nav-link text-gray-100 hover:text-green-400">Certifications</a>
+        <a href="#projects" class="nav-link text-gray-100 hover:text-green-400">Projects</a>
+        <a href="#contact" class="nav-link text-gray-100 hover:text-green-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section id="hero" class="min-h-screen flex items-center justify-center pt-16">
+    <div class="text-center animate-slide-up">
+      <h1 class="text-5xl md:text-6xl font-bold text-green-400">Arafat Rahman Sijan</h1>
+      <p class="text-xl md:text-2xl mt-4">Cybersecurity Specialist | Penetration Tester | Bug Bounty Hunter | Writer</p>
+      <p class="text-lg mt-2 opacity-80">Securing systems one vulnerability at a time.</p>
+      <div class="mt-6 space-x-4">
+        <a href="#contact" class="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Contact Me</a>
+        <a href="https://github.com/ar-sijan-official" target="_blank" class="inline-block px-6 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="py-16 px-4 md:px-20 bg-gray-800 bg-opacity-80">
+    <div class="max-w-5xl mx-auto animate-slide-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        I'm a passionate and results-driven penetration tester and bug bounty hunter based in Barishal, Bangladesh. With experience in offensive security, responsible disclosure, and report writing, I specialize in securing digital systems. Skilled in Python, Bash, and tools like Burp Suite, Nmap, and SQLmap, I enjoy breaking and securing systems — and sharing my learning through writing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-4 md:px-20 bg-gray-900 bg-opacity-80">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6 text-center">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg hover-scale">
+          <i class="fas fa-shield-alt text-green-400 text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold">Vulnerability Assessment</h3>
+          <p>Expertise in OWASP Top 10 vulnerabilities.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg hover-scale">
+          <i class="fas fa-globe text-green-400 text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold">Web Application Testing</h3>
+          <p>Testing and securing web apps for vulnerabilities.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg hover-scale">
+          <i class="fas fa-tools text-green-400 text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold">Tools</h3>
+          <p>Burp Suite, Nmap, SQLmap, Wireshark.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg hover-scale">
+          <i class="fas fa-code text-green-400 text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold">Languages</h3>
+          <p>Python, Bash, C.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg hover-scale">
+          <i class="fas fa-laptop-code text-green-400 text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold">Platforms</h3>
+          <p>Kali Linux, Windows, Parrot OS.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg hover-scale">
+          <i class="fas fa-cloud text-green-400 text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold">Cloud</h3>
+          <p>Basic knowledge in AWS, Azure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16 px-4 md:px-20 bg-gray-800 bg-opacity-80">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6 text-center">Experience</h2>
+      <div class="space-y-8">
+        <div class="border-l-4 border-green-400 pl-6">
+          <h3 class="text-xl font-semibold">Bug Bounty Hunter</h3>
+          <p class="text-green-400">HackerOne (2025–Present)</p>
+          <p>Identifying and responsibly disclosing vulnerabilities in web applications.</p>
+        </div>
+        <div class="border-l-4 border-green-400 pl-6">
+          <h3 class="text-xl font-semibold">Freelance WordPress Malware Removal Specialist</h3>
+          <p class="text-green-400">Fiverr</p>
+          <p>Cleaning and securing WordPress sites from malware infections.</p>
+        </div>
+        <div class="border-l-4 border-green-400 pl-6">
+          <h3 class="text-xl font-semibold">Writer</h3>
+          <p class="text-green-400">Medium</p>
+          <p>Writing articles on tech and personal growth.</p>
+        </div>
+        <div class="border-l-4 border-green-400 pl-6">
+          <h3 class="text-xl font-semibold">Student</h3>
+          <p class="text-green-400">University of Barishal – CSE (2024–2028)</p>
+          <p>Pursuing a degree in Computer Science and Engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="py-16 px-4 md:px-20 bg-gray-900 bg-opacity-80">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6 text-center">Certifications</h2>
+      <ul class="list-disc list-inside space-y-4">
+        <li>Certified Ethical Hacker (CEH)</li>
+        <li>Mastercard Cybersecurity Job Simulation</li>
+        <li>TEDx Certificate of Participation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-4 md:px-20 bg-gray-800 bg-opacity-80">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6 text-center">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-900 p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold">Keylogger (Python)</h3>
+          <p>An ethical/educational tool to demonstrate keylogging concepts.</p>
+          <a href="https://github.com/ar-sijan-official/keylogger" target="_blank" class="text-green-400 hover:underline">View on GitHub</a>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold">Recon Automation Tools</h3>
+          <p>Scripts to automate reconnaissance for penetration testing.</p>
+          <a href="https://github.com/ar-sijan-official/recon-tools" target="_blank" class="text-green-400 hover:underline">View on GitHub</a>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg hover-scale">
+          <h3 class="text-xl font-semibold">WordPress Malware Removal Scripts</h3>
+          <p>Automated scripts for detecting and removing malware from WordPress sites.</p>
+          <a href="https://github.com/ar-sijan-official/wp-malware-removal" target="_blank" class="text-green-400 hover:underline">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-4 md:px-20 bg-gray-900 bg-opacity-80">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-400 mb-6 text-center">Contact Me</h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <p class="text-lg mb-4">Reach out to discuss cybersecurity opportunities!</p>
+          <p><i class="fas fa-envelope mr-2"></i>ar.sijan.official@gmail.com</p>
+          <p><i class="fas fa-phone mr-2"></i>+88 01797441617</p>
+          <p><i class="fas fa-map-marker-alt mr-2"></i>Barishal, Bangladesh</p>
+          <div class="mt-4 space-x-4">
+            <a href="https://www.linkedin.com/in/arafat-rahman-sijan/" target="_blank" class="text-green-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://medium.com/@ar.sijan.official" target="_blank" class="text-green-400 hover:underline"><i class="fab fa-medium"></i> Medium</a>
+            <a href="https://github.com/ar-sijan-official" target="_blank" class="text-green-400 hover:underline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">Send a Message</h3>
+            <div>
+              <input type="text" placeholder="Name" class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+              <input type="email" placeholder="Email" class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
+              <textarea placeholder="Message" rows="5" class="w-full p-3 mb-4 bg-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+              <button class="w-full p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Send Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-800 bg-opacity-80 text-center">
+    <p>Copyright © 2025 Arafat Rahman Sijan, Barishal, Bangladesh</p>
+    <p id="current-time" class="text-green-400"></p>
+  </footer>
+
+  <script>
+    // Matrix Rain Animation
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const chars = '01ABCDEFアカサタナハマヤラワ';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = [];
+    let mouseX = null;
+    let mouseY = null;
+
+    for (let x = 0; x < columns; x++) {
+      drops[x] = { y: Math.random() * canvas.height, speed: 1 + Math.random() * 2 };
+    }
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0F0';
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        const x = i * fontSize;
+        let y = drops[i].y;
+
+        const dist = mouseX && mouseY ? Math.sqrt((x - mouseX) ** 2 + (y - mouseY) ** 2) : Infinity;
+        if (dist < 100) {
+          y += 10;
+          drops[i].y = y > canvas.height ? 0 : y;
+        } else {
+          drops[i].y += drops[i].speed;
+          if (drops[i].y > canvas.height) drops[i].y = 0;
+        }
+
+        ctx.fillText(text, x, drops[i].y);
+      }
+    }
+
+    setInterval(draw, 33);
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Display and update current time in Bangladesh (BDT)
+    function updateTime() {
+      const options = { 
+        timeZone: 'Asia/Dhaka', 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric', 
+        hour12: true,
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      };
+      const time = new Date().toLocaleString('en-US', options);
+      document.getElementById('current-time').textContent = `Current Time in Bangladesh: ${time}`;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
